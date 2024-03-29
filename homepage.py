@@ -6,10 +6,10 @@ from streamlit_extras.switch_page_button import switch_page
 # Function to connect to MySQL database
 def connect_to_database():
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="new_password",
-        database="streamlit_login"
+        host="sql311.infinityfree.com",
+        user="if0_36264822",
+        password="MYCV6KHMeBY9",
+        database="if0_36264822_users"
     )
     return conn
 
