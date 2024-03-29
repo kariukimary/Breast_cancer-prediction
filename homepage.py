@@ -18,7 +18,7 @@ def authenticate_user(username, password):
     conn = connect_to_database()
     if conn:
         cursor = conn.cursor()
-        query = "SELECT * FROM logins WHERE username = %s AND password = %s"
+        query = "SELECT * FROM streamlit WHERE username = %s AND password = %s"
         cursor.execute(query, (username, password))
         result = cursor.fetchone()
         cursor.close()
@@ -32,7 +32,7 @@ def sign_up_user(username, password):
     conn = connect_to_database()
     if conn:
         cursor = conn.cursor()
-        query = "INSERT INTO logins (username, password) VALUES (%s, %s)"
+        query = "INSERT INTO streamlit (username, password) VALUES (%s, %s)"
         cursor.execute(query, (username, password))
         conn.commit()
         cursor.close()
